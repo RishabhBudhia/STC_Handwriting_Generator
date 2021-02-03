@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+/* .heading__container > h2 {
+  display: grid;
+  place-items: center;
+} */
+
+body,
+html {
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+/* #navbarNav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 55rem;
+  padding: 5px !important;
+} */
+
+/* ------------------------NAVBAR----------------------------------------------------- */
+.navbar {
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.nav_btn {
+  background-color: #00ffc2;
+  border-radius: 4px;
+  width: 9rem;
+}
+
+/* ------------------------------------LANDING PAGE------------------------------------- */
+.heading__container {
+  /* min-height: 100vh; */
+  width: 100vw;
+  margin-top: 5rem;
+}
+.heading__container h2 {
+  color: #28364a;
+  font-family: "Rubik", sans-serif;
+  font-size: 64px;
+  line-height: 76.8px;
+}
+.heading__container span {
+  margin-left: 0.25rem;
+  border-bottom: 15px solid pink;
+}
+.heading__container .para {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  padding-top: 2rem;
+}
+
+.heading__button .btn {
+  margin: 25px;
+  width: 213px;
+  height: 3rem;
+  border-radius: 4px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+.heading__button .btn_demo {
+  border: 2px solid #00ffc2;
+  border-radius: 4px;
+}
+.heading__button .btn_start {
+  background-color: #00ffc2;
+  border-radius: 4px;
+}
+
+.heading__video {
+  width: 50vw;
+  height: 25vw;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+/* -----------------------------------ABOUT US--------------------------------------------- */
+.feature__container {
+  padding-top: 5rem;
+  margin-top: 5rem;
+  min-height: 500px;
+  width: 100%;
+  background-color: #f6ece0;
+}
+
+.feature_heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  /* font-feature-settings: "liga" off; */
+  color: #151d28;
+}
+
+.feature_para {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+.features h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.features p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.features img {
+  margin-bottom: 2rem;
+}
+.feature_start {
+  margin-bottom: 5rem;
+}
+/* ----------------------------DRAG AND DROP/FILE UPLOAD----------------------------------------------- */
+/* Main Section*/
+.file_upload h2,
+.select_font h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 48px;
+  margin-top: 5rem;
+}
+#main {
+  height: 100vh;
+}
+.file_upload p,
+.select_font p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5rem;
+}
+.drag_drop {
+  position: relative;
+  height: 260px;
+  max-width: 410px;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.drag_drop_outline {
+  position: absolute;
+  top: 40%;
+  left: 0.75%;
+  /* border: 2px dashed #ef9f9a; */
+  width: 386px;
+  height: 236px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #151d28;
+}
+.btn_convert {
+  width: 213px;
+  height: 3rem;
+  border-radius: 4px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #00ffc2;
+}
+.btn_disable {
+  background-color: #00ffc2;
+  opacity: 0.25 !important;
+}
+/*drop*/
+.drop-zone {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px dashed #ef9f9a;
+  width: 386px;
+  height: 236px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #cccccc;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+/* .drop-zone__thumb::after {
+  content: attr(data-label);
+  margin: auto;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+} */
+/*end*/
+
+/* ------------------------------------FONT SELECT-------------------------------------------------- */
+.font_select {
+  height: 260px;
+  max-width: 410px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+/* -----------------------FOOTER--------------------------------------------------------- */
+.footer {
+  margin-top: 5rem;
+  height: 280px;
+  width: 100%;
+  background-color: #0c0803;
+  color: white;
+}
+
+#file_name {
+  border: 2px solid #9f9f9f;
+  border-radius: 4px;
+  max-height: fit-content;
+  max-width: 90%;
+  margin-left: 15px;
+  padding: 15px 16px 15px 24px;
+  color: #0c0803;
+  word-wrap: break-word;
+}
+.success_container {
+  border: 2px solid #00ffc2;
+}
+
+.success_container p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #006b51;
+  margin-bottom: 2rem;
+}
+.successful img {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.error_container {
+  border: 2px solid #e80101;
+}
+
+.error_container p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #a40000;
+  margin-bottom: 2rem;
+}
+.error img {
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
