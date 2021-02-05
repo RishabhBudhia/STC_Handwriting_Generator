@@ -84,10 +84,17 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 
       var check = inputElement.files[0].name.trim().replace(/\s/g, "");
       file_name.innerHTML = inputElement.files[0].name;
-      // var regx = /.+\.pdf$/;
+
       var regx = /^([A-Za-z0-9_./()-]{2,500}).pdf$/;
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
+      // if (regx.test(check)) {
+      //   file_name.innerHTML =
+      //     '<img src="./pdf.svg"> ' + inputElement.files[0].name;
+      // } else {
+      //   file_name.innerHTML =
+      //     '<img src="./word.svg"> ' + inputElement.files[0].name;
+      // }
       if (regx.test(check) || regxtwo.test(check) || regxthree.test(check)) {
         document.getElementById("upload").style.display = "none";
         document.getElementById("success_container").style.display = "block";
