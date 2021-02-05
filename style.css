@@ -44,9 +44,9 @@ nav {
   margin-left: auto;
 }
 /* ------------------------------------LANDING PAGE------------------------------------- */
-@media only screen and (max-width: 405px) {
+@media only screen and (max-width: 445px) {
   .drag_drop_outline {
-    left: -9.25% !important;
+    left: -8.25% !important;
   }
 }
 @media only screen and (max-width: 767px) {
