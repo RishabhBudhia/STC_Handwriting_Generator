@@ -165,20 +165,46 @@ function updateThumbnail(dropZoneElement, file) {
   thumbnailElement.dataset.label = file.name;
 
   // Show thumbnail for image files
-  if (file.type.endsWith(".pdf") || file.type.endsWith(".docx")) {
-    const reader = new FileReader();
+  // if (file.type.endsWith(".pdf") || file.type.endsWith(".docx")) {
+  //   const reader = new FileReader();
 
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-    };
-  } else {
-    thumbnailElement.style.backgroundImage = null;
-  }
+  //   reader.readAsDataURL(file);
+  //   reader.onload = () => {
+  //     thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+  //   };
+  // } else {
+  //   thumbnailElement.style.backgroundImage = null;
+  // }
+
+}
+
+// file to be loaded 
+document.querySelector('#myfile').addEventListener('change', event => {
+  handleImageUpload(event)
+})
+
+let files = ' '
+const handleImageUpload = async event => {
+  files = await event.target.files
 }
 
 var font_select = document.getElementById("finalbtn");
-font_select.addEventListener("click", () => {
+font_select.addEventListener("click", async () => {
   let selected = document.querySelector('input[type="radio"]:checked');
-  console.log(selected.value);
+  // console.log(selected.value);
+
+  const formData = new FormData()
+  formData.append('file', files[0])
+  formData.append('font', selected.value)
+
+  await fetch('https://stc-handwriter.herokuapp.com/', {
+    method: 'POST',
+    body: formData
+  })
+    .then(() => {
+      window.open('https://stc-handwriter.herokuapp.com/handwritten.pdf', '_blank');
+    })
+    .catch(error => {
+      console.error(error)
+    })
 });
