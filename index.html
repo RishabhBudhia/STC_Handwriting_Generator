@@ -267,10 +267,10 @@
           <!-- <div class="col-lg-3 col-md-3 col-sm-1 font_select m-auto" data-value="1" id="font1">Font Name 1</div>
             <div class="col-lg-3 col-md-3 col-sm-1 font_select m-auto" data-value="2" id="font2">Font Name 2</div>
             <div class=" col-lg-3 col-md-3 col-sm-1 font_select m-auto" data-value="3" id="font3">Font name 3</div> -->
-          <form action="">
+          <form action="" id="font_form">
             <div class="font_outer d-flex justify-content-center align-items-center ">
-              <div class="row">
-                <div class="col"> <input type="radio" name="font" id="font1" value="1"> <label for="font1">
+              <div class="row" id="font_select">
+                <div class="col"> <input type="radio" name="font" id="font1" value="1" checked="checked"> <label for="font1">
                     <div class="font_select">Font Name 1</div>
                   </label></div>
                 <div class="col"> <input type="radio" name="font" id="font2" value="2"> <label for="font2">
@@ -283,7 +283,7 @@
               
             </div>
             <div class="row d-flex justify-content-center align-items-center mt-5">
-              <button type="submit" class="btn btn_convert">Convert</button>
+              <button type="button" class="btn btn_convert" id="finalbtn">Convert</button>
             </div>
           </form>
         </div>
@@ -363,6 +363,9 @@
     </div>
   </footer>
 
+
+ 
+ 
   <!-- --------------------------SCRIPT TAGS---------------------------------------------------------- -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

@@ -88,13 +88,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regx = /^([A-Za-z0-9_./()-]{2,500}).pdf$/;
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
-      // if (regx.test(check)) {
-      //   file_name.innerHTML =
-      //     '<img src="./pdf.svg"> ' + inputElement.files[0].name;
-      // } else {
-      //   file_name.innerHTML =
-      //     '<img src="./word.svg"> ' + inputElement.files[0].name;
-      // }
+
       if (regx.test(check) || regxtwo.test(check) || regxthree.test(check)) {
         document.getElementById("upload").style.display = "none";
         document.getElementById("success_container").style.display = "block";
@@ -182,3 +176,9 @@ function updateThumbnail(dropZoneElement, file) {
     thumbnailElement.style.backgroundImage = null;
   }
 }
+
+var font_select = document.getElementById("finalbtn");
+font_select.addEventListener("click", () => {
+  let selected = document.querySelector('input[type="radio"]:checked');
+  console.log(selected.value);
+});
