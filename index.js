@@ -200,32 +200,32 @@ font_select.addEventListener("click", async () => {
 
   //------------------------------------>for testing in local env
 
-  await fetch('http://localhost:3000/handwriter/convert', {
-    method: 'POST',
-    body: formData
-  })
-    .then(() => {
-      // window.open('http://localhost:3000/handwritten.pdf', '_blank');
-      window.location.href = 'http://localhost:3000/handwritten.pdf'
-    })
-    .catch(error => {
-      console.error(error)
-    })
-
-
-  // -------------------------------------> for production
-
-  //   await fetch('https://stc-handwriter.herokuapp.com/handwriter/convert', {
+  // await fetch('http://localhost:3000/handwriter/convert', {
   //   method: 'POST',
   //   body: formData
   // })
   //   .then(() => {
-  //     window.open('https://stc-handwriter.herokuapp.com/handwritten.pdf', '_blank');
-  //     // window.location.href = 'http://localhost:3000/handwritten.pdf'
+  //     // window.open('http://localhost:3000/handwritten.pdf', '_blank');
+  //     window.location.href = 'http://localhost:3000/handwritten.pdf'
   //   })
   //   .catch(error => {
   //     console.error(error)
   //   })
+
+
+  // -------------------------------------> for production
+
+    await fetch('https://stc-handwriter.herokuapp.com/handwriter/convert', {
+    method: 'POST',
+    body: formData
+  })
+    .then(() => {
+      window.open('https://stc-handwriter.herokuapp.com/handwritten.pdf', '_blank');
+      // window.location.href = 'http://localhost:3000/handwritten.pdf'
+    })
+    .catch(error => {
+      console.error(error)
+    })
 
 
 
