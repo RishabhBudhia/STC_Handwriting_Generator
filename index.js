@@ -65,10 +65,9 @@ $(document).ready(() => {
     $("#font").show("slide", { direction: "left" }, 1000);
   });
   $("#finalbtn").click(() => {
-    $("#download").show("slide", { direction: "left" }, 1500);
-    $("#font").hide("slide", { direction: "left" }, 1000);
-    $("#success_container").hide("slide", { direction: "left" }, 1000);
-    // $("#font").css("display", "none");
+    $("#download").show();
+    $("#font").hide();
+    $("#success_container").hide();
   });
 });
 
@@ -198,38 +197,24 @@ font_select.addEventListener("click", async () => {
   let selected = document.querySelector('input[type="radio"]:checked');
   // console.log(selected.value);
 
+  
   const formData = new FormData();
   formData.append("file", files[0]);
   formData.append("font", selected.value);
 
-  //------------------------------------>for testing in local env
+  let url = 'https://stc-handwriter.azurewebsites.net/';
 
-  // await fetch('http://localhost:3000/handwriter/convert', {
-  //   method: 'POST',
-  //   body: formData
-  // })
-  //   .then(() => {
-  //     // window.open('http://localhost:3000/handwritten.pdf', '_blank');
-  //     window.location.href = 'http://localhost:3000/handwritten.pdf'
-  //   })
-  //   .catch(error => {
-  //     console.error(error)
-  //   })
-
-  // -------------------------------------> for production
-
-  await fetch("https://stc-handwriter.herokuapp.com/handwriter/convert", {
-    method: "POST",
-    body: formData,
+  // let url = 'http://localhost:3000/'
+  fetch(url + 'handwriter/convert', {
+    method: 'POST',
+    body: formData
   })
-    .then(() => {
-      window.open(
-        "https://stc-handwriter.herokuapp.com/handwritten.pdf",
-        "_blank"
-      );
-      // window.location.href = 'http://localhost:3000/handwritten.pdf'
+    .then((response)=> response.json())
+    .then(async (result) => {
+      console.log(result.pdfFilename);
     })
-    .catch((error) => {
-      console.error(error);
-    });
+    .catch(error => {
+      console.error(error)
+    })
+
 });
