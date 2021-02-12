@@ -422,3 +422,17 @@ nav {
   text-decoration: none;
   color: white;
 }
+
+.font_img{
+  /* background-image: url('./assests/fonts/fontdemo.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center; */
+  width: fit-content;
+  height: fit-content;
+}
+
+.font_img img{
+  max-width: 100%;
+  max-height: max-content;
+}

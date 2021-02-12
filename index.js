@@ -85,23 +85,33 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       updateThumbnail(dropZoneElement, inputElement.files[0]);
 
       console.log(inputElement.files[0]);
+      console.log(inputElement.files[0].size);
       console.log(inputElement.files[0].name);
+
+      let size_of_file = inputElement.files[0].size;
 
       var check = inputElement.files[0].name.trim().replace(/\s/g, "");
       file_name.innerHTML = inputElement.files[0].name;
 
-      var regx = /^([A-Za-z0-9_./()-]{2,500}).pdf$/;
+
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
 
-      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
-        document.getElementById("upload").style.display = "none";
-        document.getElementById("success_container").style.display = "block";
-      } else {
+      if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
+        if (size_of_file > 500000) {
+          document.getElementById("upload").style.display = "none";
+          document.getElementById("error_container").style.display = "block";
+          alert("file size too large");
+        } else {
+          document.getElementById("upload").style.display = "none";
+          document.getElementById("success_container").style.display = "block";
+        }
+      }
+      else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .pdf or .doc or docx or txt");
+        alert("File type should be .doc or docx or txt");
       }
     }
   });
@@ -123,22 +133,29 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
     if (e.dataTransfer.files.length) {
       inputElement.files = e.dataTransfer.files;
       console.log(e.dataTransfer.files[0]);
+      console.log(e.dataTransfer.files[0].size);
       console.log(e.dataTransfer.files[0].name);
 
       var check = e.dataTransfer.files[0].name.trim().replace(/\s/g, "");
       file_name.innerHTML = e.dataTransfer.files[0].name;
       // var regx = /.+\.pdf$/;
-      var regx = /^([A-Za-z0-9_./()]{2,500}).pdf$/;
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
-      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
-        document.getElementById("upload").style.display = "none";
-        document.getElementById("success_container").style.display = "block";
-      } else {
+      if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
+        if (size_of_file > 500000) {
+          document.getElementById("upload").style.display = "none";
+          document.getElementById("error_container").style.display = "block";
+          alert("file size too large");
+        } else {
+          document.getElementById("upload").style.display = "none";
+          document.getElementById("success_container").style.display = "block";
+        }
+      }
+      else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .pdf or .doc or docx or txt");
+        alert("File type should be .doc or docx or txt");
       }
 
       updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
@@ -203,8 +220,8 @@ font_select.addEventListener("click", async () => {
     .then((response) => response.json())
     .then(async (result) => {
 
-      window.open((url + result.pdfFilename), '_blank')
-      location.reload()
+      window.location.href = (url + result.pdfFilename)
+      // location.reload()
     })
     .catch(error => {
       console.error(error)
