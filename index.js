@@ -93,14 +93,15 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regx = /^([A-Za-z0-9_./()-]{2,500}).pdf$/;
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
+      var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
 
-      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check)) {
+      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
         document.getElementById("upload").style.display = "none";
         document.getElementById("success_container").style.display = "block";
       } else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .pdf or .doc or docx");
+        alert("File type should be .pdf or .doc or docx or txt");
       }
     }
   });
@@ -130,13 +131,14 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regx = /^([A-Za-z0-9_./()]{2,500}).pdf$/;
       var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
-      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check)) {
+      var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
+      if (regx.test(check) || regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
         document.getElementById("upload").style.display = "none";
         document.getElementById("success_container").style.display = "block";
       } else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .pdf or .doc or docx");
+        alert("File type should be .pdf or .doc or docx or txt");
       }
 
       updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
@@ -169,17 +171,6 @@ function updateThumbnail(dropZoneElement, file) {
 
   thumbnailElement.dataset.label = file.name;
 
-  // Show thumbnail for image files
-  // if (file.type.endsWith(".pdf") || file.type.endsWith(".docx")) {
-  //   const reader = new FileReader();
-
-  //   reader.readAsDataURL(file);
-  //   reader.onload = () => {
-  //     thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-  //   };
-  // } else {
-  //   thumbnailElement.style.backgroundImage = null;
-  // }
 }
 
 // file to be loaded
@@ -197,7 +188,7 @@ font_select.addEventListener("click", async () => {
   let selected = document.querySelector('input[type="radio"]:checked');
   // console.log(selected.value);
 
-  
+
   const formData = new FormData();
   formData.append("file", files[0]);
   formData.append("font", selected.value);
@@ -209,9 +200,11 @@ font_select.addEventListener("click", async () => {
     method: 'POST',
     body: formData
   })
-    .then((response)=> response.json())
+    .then((response) => response.json())
     .then(async (result) => {
-      console.log(result.pdfFilename);
+
+      window.open((url + result.pdfFilename), '_blank')
+      location.reload()
     })
     .catch(error => {
       console.error(error)
