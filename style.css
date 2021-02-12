@@ -53,7 +53,7 @@ nav {
   /* CSS */
   #landing {
     top: 0;
-    background-image: url("./hero.svg") !important;
+    background-image: url("./assests/hero.svg") !important;
     min-height: 160vh !important;
   }
   .heading__container h2 {
@@ -117,7 +117,7 @@ nav {
   display: none;
 }
 #landing {
-  background-image: url("./heronew.svg");
+  background-image: url("./assests/heronew.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -406,6 +406,7 @@ nav {
   margin-top: 4rem;
   padding-bottom: 2rem;
 }
+
 #footer_mobile {
   display: none;
 }

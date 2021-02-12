@@ -64,6 +64,12 @@ $(document).ready(() => {
   $("#convert_one").click(() => {
     $("#font").show("slide", { direction: "left" }, 1000);
   });
+  $("#finalbtn").click(() => {
+    $("#download").show("slide", { direction: "left" }, 1500);
+    $("#font").hide("slide", { direction: "left" }, 1000);
+    $("#success_container").hide("slide", { direction: "left" }, 1000);
+    // $("#font").css("display", "none");
+  });
 });
 
 var file_name = document.getElementById("file_name");
@@ -175,28 +181,26 @@ function updateThumbnail(dropZoneElement, file) {
   // } else {
   //   thumbnailElement.style.backgroundImage = null;
   // }
-
 }
 
-// file to be loaded 
-document.querySelector('#myfile').addEventListener('change', event => {
-  handleImageUpload(event)
-})
+// file to be loaded
+document.querySelector("#myfile").addEventListener("change", (event) => {
+  handleImageUpload(event);
+});
 
-let files = ' '
-const handleImageUpload = async event => {
-  files = await event.target.files
-}
+let files = " ";
+const handleImageUpload = async (event) => {
+  files = await event.target.files;
+};
 
 var font_select = document.getElementById("finalbtn");
 font_select.addEventListener("click", async () => {
   let selected = document.querySelector('input[type="radio"]:checked');
   // console.log(selected.value);
 
-  const formData = new FormData()
-  formData.append('file', files[0])
-  formData.append('font', selected.value)
-
+  const formData = new FormData();
+  formData.append("file", files[0]);
+  formData.append("font", selected.value);
 
   //------------------------------------>for testing in local env
 
@@ -212,21 +216,20 @@ font_select.addEventListener("click", async () => {
   //     console.error(error)
   //   })
 
-
   // -------------------------------------> for production
 
-    await fetch('https://stc-handwriter.herokuapp.com/handwriter/convert', {
-    method: 'POST',
-    body: formData
+  await fetch("https://stc-handwriter.herokuapp.com/handwriter/convert", {
+    method: "POST",
+    body: formData,
   })
     .then(() => {
-      window.open('https://stc-handwriter.herokuapp.com/handwritten.pdf', '_blank');
+      window.open(
+        "https://stc-handwriter.herokuapp.com/handwritten.pdf",
+        "_blank"
+      );
       // window.location.href = 'http://localhost:3000/handwritten.pdf'
     })
-    .catch(error => {
-      console.error(error)
-    })
-
-
-
+    .catch((error) => {
+      console.error(error);
+    });
 });
