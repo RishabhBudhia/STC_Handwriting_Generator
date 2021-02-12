@@ -66,8 +66,8 @@ $(document).ready(() => {
   });
   $("#finalbtn").click(() => {
     $("#download").show("slide", { direction: "left" }, 1500);
-    // $("#font").hide("slide", { direction: "left" }, 1000);
-    // $("#success_container").hide("slide", { direction: "left" }, 1000);
+    $("#font").hide("slide", { direction: "left" }, 1000);
+    $("#success_container").hide("slide", { direction: "left" }, 1000);
     // $("#font").css("display", "none");
   });
 });
