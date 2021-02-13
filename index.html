@@ -6,13 +6,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
   <link rel="stylesheet" href="./style.css" />
-  <title>Handwriting Generator</title>
+  <title>Scribbler</title>
+  <link rel="icon" href="./assests/favicon3.svg">
 </head>
 
 <body>
@@ -50,15 +52,15 @@
         <div class="col-md-11 text-center m-auto">
           <div class="inner">
             <h2 id="land_web" style="padding-top: 5rem">
-              Convert your
+              Convert Your
               <span class="txt-rotate" data-period="2000" data-rotate='["Document"]'></span>
             </h2>
             <h2 id="land_mob" style="padding-top: 5rem">
-              Convert your <br>
+              Convert Your <br>
               <span class="txt-rotate" data-period="2000" data-rotate='["Document"]'></span>
             </h2>
             <h2 class="mt-3" style="display: grid; place-items: center">
-              Into handwritten text
+              Into Handwritten Text
             </h2>
             <p class="text-muted para">
               Upload the file in .doc, .txt, .docx format
@@ -84,6 +86,11 @@
     <div class="container-fluid">
       <div class="video">
         <div class="heading__video text-center m-auto pt-5">
+          <!-- <video autoplay>
+            <source src="./assests/video/C" type="video/mp4">
+
+            Your browser does not support the video tag.
+          </video> -->
           <h1>Demo Video</h1>
         </div>
       </div>
@@ -237,7 +244,7 @@
               <div class="error">
                 <img src="./assests/video/Comp 1_4.gif" alt="" />
                 <p>
-                <h5 class="ml2">Your file is downloading...</h5>
+                <h5 class="ml2">Converting...</h5>
                 </p>
               </div>
             </div>
@@ -282,16 +289,16 @@
                 <div class="col"> <input type="radio" name="font" id="font1" value="1" checked="checked"> <label
                     for="font1">
                     <div class="font_select font_img">
-                      <img src="./assests/fonts/font1_demo.jpeg">
+                      <img src="./assests/fonts/font1Optimized.jpg">
                     </div>
                   </label></div>
                 <div class="col"> <input type="radio" name="font" id="font2" value="2"> <label for="font2">
                     <div class=" font_select font_img">
-                      <img src="./assests/fonts/font2_demo.jpeg">
+                      <img src="./assests/fonts/font2Optimized.jpg">
                     </div>
                   </label></div>
                 <div class="col"><input type="radio" name="font" id="font3" value="3"> <label for="font3">
-                    <div class="font_select font_img"> <img src="./assests/fonts/font3_demo.jpeg">
+                    <div class="font_select font_img"> <img src="./assests/fonts/font3Optimized.jpg">
                     </div>
                   </label></div>
               </div>

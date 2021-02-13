@@ -469,13 +469,30 @@ nav {
 
 @media (max-width: 767px) {
   .font_select {
-    min-height: 260px;
-    width: 80vw !important;
+    width: 258px !important;
+    height: 164px !important;
     margin: auto;
+  }
+  .font_img img{
+    width: 100% !important;
+    height:100% !important;
   }
   .font_outer .col {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .font_img{
+    /* background-image: url('./assests/fonts/fontdemo.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center; */
+    width: fit-content;
+    height:auto;
+  }
+  
+  .font_img img{
+    max-width: 100%;
+    height:auto;
   }
 }

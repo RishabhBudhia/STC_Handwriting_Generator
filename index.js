@@ -123,7 +123,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
 
       if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 500000) {
+        if (size_of_file > 100000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
           alert("file size too large");
@@ -167,7 +167,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
       if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 500000) {
+        if (size_of_file > 100000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
           alert("file size too large");
@@ -249,6 +249,7 @@ font_select.addEventListener("click", async () => {
     })
     .catch(error => {
       console.error(error)
+      alert("There was some error. Please refresh and upload your file again!");
     })
 
 });
