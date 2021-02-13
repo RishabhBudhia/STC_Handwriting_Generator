@@ -44,75 +44,7 @@ nav {
   margin-left: auto;
 }
 /* ------------------------------------LANDING PAGE------------------------------------- */
-@media only screen and (max-width: 445px) {
-  .drag_drop_outline {
-    left: -8.25% !important;
-  }
-}
-@media only screen and (max-width: 767px) {
-  /* CSS */
-  #landing {
-    top: 0;
-    background-image: url("./assests/hero.svg") !important;
-    min-height: 160vh !important;
-  }
-  .heading__container h2 {
-    color: #151d28;
-    font-family: "Graphik";
-    font-weight: 700;
-    font-size: 40px !important;
-    line-height: 48px !important;
-  }
-  #video {
-    background-color: white;
-    position: absolute;
-    z-index: 1;
-    /* top: 50rem !important; */
-    top: 40rem !important;
-    left: 14% !important;
-    width: 73vw !important;
-    height: 50vh !important;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-  }
-  /* .heading__button {
-    display: flex !important;
-  } */
-  .heading__button .btn {
-    margin: 25px;
-    width: 160px !important;
-    height: 3rem;
-    border-radius: 4px;
-    color: black;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-  }
-  .feature__container {
-    padding-top: 5rem !important;
-    margin-top: -7rem;
-  }
-  #carouselExampleInterval {
-    margin-top: -4rem;
-    display: block !important;
-  }
-  .features {
-    display: none;
-  }
-  .file_upload h2,
-  .select_font h2 {
-    font-size: 33px !important;
-    line-height: 40px !important;
-  }
-  .drag_drop_outline {
-    left: -2.25%;
-  }
-  #footer_web {
-    display: none;
-  }
-  #footer_mobile {
-    display: block !important;
-  }
-}
+
 #carouselExampleInterval {
   display: none;
 }
@@ -184,6 +116,9 @@ nav {
 }
 
 /* -----------------------------------ABOUT US--------------------------------------------- */
+#about{
+  margin-top: 5rem;
+}
 .feature__container {
   padding-top: 5rem;
   /* margin-top: -5rem; */
@@ -314,18 +249,7 @@ nav {
 }
 
 /* ------------------------------------FONT SELECT-------------------------------------------------- */
-@media (max-width: 767px) {
-  .font_select {
-    min-height: 260px;
-    width: 80vw !important;
-    margin: auto;
-  }
-  .font_outer .col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
 .font_select {
   height: 260px;
   width: 20vw;
@@ -435,4 +359,103 @@ nav {
 .font_img img{
   max-width: 100%;
   max-height: max-content;
+}
+
+
+@media only screen and (max-width: 445px) {
+  .drag_drop_outline {
+    left: -12.25% !important;
+  }
+}
+@media only screen and (max-width: 346px) {
+  .drag_drop_outline {
+    left: -19.25% !important;
+  }
+}
+@media (min-width:783px) and (max-width: 983px) {
+  #video{
+    top:90% !important;
+  }
+}
+@media (min-width:767px) and (max-width: 987px) {
+ .footer{
+   margin-top: 10rem;
+ }
+}
+@media only screen and (max-width: 767px) {
+  /* CSS */
+  #landing {
+    top: 0;
+    background-image: url("./assests/hero.svg") !important;
+    min-height: 160vh !important;
+  }
+  .heading__container h2 {
+    color: #151d28;
+    font-family: "Graphik";
+    font-weight: 700;
+    font-size: 40px !important;
+    line-height: 48px !important;
+  }
+  #video {
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    /* top: 50rem !important; */
+    top: 40rem !important;
+    left: 14% !important;
+    width: 73vw !important;
+    height: 50vh !important;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+  }
+  /* .heading__button {
+    display: flex !important;
+  } */
+  .heading__button .btn {
+    margin: 25px;
+    width: 160px !important;
+    height: 3rem;
+    border-radius: 4px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+  }
+  .feature__container {
+    padding-top: 5rem !important;
+    margin-top: -7rem;
+  }
+  #carouselExampleInterval {
+    margin-top: -4rem;
+    display: block !important;
+  }
+  .features {
+    display: none;
+  }
+  .file_upload h2,
+  .select_font h2 {
+    font-size: 33px !important;
+    line-height: 40px !important;
+  }
+  .drag_drop_outline {
+    left: -2.25%;
+  }
+  #footer_web {
+    display: none;
+  }
+  #footer_mobile {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .font_select {
+    min-height: 260px;
+    width: 80vw !important;
+    margin: auto;
+  }
+  .font_outer .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

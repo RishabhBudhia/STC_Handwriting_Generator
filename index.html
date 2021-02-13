@@ -20,7 +20,7 @@
   <section>
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Handwriter</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -29,16 +29,13 @@
           <ul class="navbar-nav w-100">
             <div class="mr-auto"></div>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">About Us</a>
+              <a class="nav-link active mr-3" aria-current="page" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Demo</a>
+              <a class="nav-link active mr-3" href="#video">Demo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn nav_btn" href="#">Try for Free</a>
+              <a class="nav-link btn nav_btn" href="#main">Try for Free</a>
             </li>
           </ul>
         </div>
@@ -54,7 +51,7 @@
           <div class="inner">
             <h2 style="padding-top: 5rem">
               Convert your
-              <span class="txt-rotate" data-period="2000" data-rotate='["text"]'></span>
+              <span class="txt-rotate" data-period="2000" data-rotate='["Text","Doc"]'></span>
             </h2>
             <h2 style="display: grid; place-items: center">
               Into handwritten text in minutes
@@ -64,14 +61,14 @@
               handwritten copy of the text in minutes
             </p>
             <div class="heading__button mb-5">
-              <div class="row d-flex justify-content-center">
+              <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-lg-3">
-                  <button type="button" class="btn btn_demo">Demo</button>
+                  <a href="#video" class=" d-flex justify-content-center align-items-center"
+                    style="text-decoration: none;"><button type="button" class="btn btn_demo">Demo</button></a>
                 </div>
                 <div class="col-lg-3">
-                  <button type="button" class="btn btn_start">
-                    Get Started
-                  </button>
+                  <a href="#main" class=" d-flex justify-content-center align-items-center"
+                    style="text-decoration: none;"><button type="button" class="btn btn_start">Get Started</button></a>
                 </div>
               </div>
             </div>
@@ -80,7 +77,7 @@
       </div>
   </section>
 
-  <section id="video" style="margin-top: 3rem !important">
+  <section id="video" style="margin-top: 3rem !important;">
     <div class="container-fluid">
       <div class="video">
         <div class="heading__video text-center m-auto pt-5">
@@ -91,7 +88,7 @@
   </section>
 
   <!-- -------------------------------------ABOUT US-------------------------------------------- -->
-  <section id="about">
+  <section id="about" style="min-height: 75vh;">
     <div class="feature__container text-center container-fluid col-md-12">
       <div class="row feature_start">
         <h2 class="feature_heading">Customized Features</h2>
@@ -234,7 +231,9 @@
             <div class="drag_drop text-center m-auto">
               <div class="error">
                 <img src="./assests/download.svg" alt="" />
-                <p>Your file is downloading...</p>
+                <p>
+                <h5 class="ml2">Your file is downloading...</h5>
+                </p>
               </div>
             </div>
           </div>
@@ -258,9 +257,9 @@
   </main>
 
   <!-- -------------------------------FONT SELECTION-------------------------------------------------- -->
-  <section id="font" style="display: none;">
+  <section id="font" style="display: none;min-height: 100vh;">
     <form action="">
-      <div class="container">
+      <div class=" container">
         <div class="row text-center">
           <div class="select_font col-md-7 m-auto">
             <h2 id="font_head">Select the font</h2>
@@ -294,7 +293,8 @@
 
             </div>
             <div class="row d-flex justify-content-center align-items-center mt-5">
-              <button type="button" class="btn btn_convert" id="finalbtn">Convert</button>
+              <a href="#main" class=" d-flex justify-content-center align-items-center" style="text-decoration: none;">
+                <button type="button" class="btn btn_convert" id="finalbtn">Convert</button></a>
             </div>
           </form>
         </div>
@@ -313,8 +313,8 @@
         </div>
         <div class="row   mb-5 ">
           <div class="wrapper d-flex text-center justify-content-center align-items-center footer_nav">
-            <div class="col-8"> <a href="" class="p-2">About Us</a><a href="" class="p-2">Demo</a><a href=""
-                class="p-2">Testimonials</a><a href="" class="p-2">Try Now</a></div>
+            <div class="col-8"> <a href="#about" class="p-2">About Us</a><a href="#video" class="p-2">Demo</a><a
+                href="#main" class="p-2">Try Now</a></div>
           </div>
         </div>
         <div class="row">
@@ -326,9 +326,12 @@
           </div>
           <div class="col mt-3">
 
-            <a href="" class="p-2 float-end"><img src="./assests/insta.svg" alt=""></a>
-            <a href="" class="p-2 float-end"><img src="./assests/linkenIn.svg" alt=""></a>
-            <a href="" class="p-2 float-end"><img src="./assests/facebook.svg" alt=""></a>
+            <a href="https://www.instagram.com/mstcvit/" class="p-2 float-end"><img src="./assests/insta.svg"
+                alt=""></a>
+            <a href="https://www.linkedin.com/company/micvitvellore/" class="p-2 float-end"><img
+                src="./assests/linkenIn.svg" alt=""></a>
+            <a href="https://www.facebook.com/mstcvit" class="p-2 float-end"><img src="./assests/facebook.svg"
+                alt=""></a>
           </div>
         </div>
         <div class="row text-center justify-content-center mt-4">
@@ -346,17 +349,18 @@
     <div class="footer">
       <div class="container">
         <div class="row pt-5 pb-5 pl-5">Logo</div>
-        <div class="row pb-3 pl-4"><a href="">About Us</a></div>
-        <div class="row pb-3 pl-4"><a href="">Demo</a></div>
-        <div class="row pb-3 pl-4"><a href="">Testimonials</a></div>
-        <div class="row pb-5 pl-4"><a href="">Try Now</a></div>
-        <div class="row pb-2 pl-4 "><a href="" style="font-weight: 600;">Contact Us</a></div>
+        <div class="row pb-3 pl-4"><a href="#about">About Us</a></div>
+        <div class="row pb-3 pl-4"><a href="#video">Demo</a></div>
+        <div class="row pb-5 pl-4"><a href="#main">Try Now</a></div>
+        <div class="row pb-2 pl-4 "><a href="https://www.instagram.com/mstcvit/" style="font-weight: 600;">Contact
+            Us</a></div>
         <div class="row">
           <div class="col mt-3">
 
-            <a href="" class="pr-3 pl-4"><img src="./assests/insta.svg" alt=""></a>
-            <a href="" class="pr-3 "><img src="./assests/linkenIn.svg" alt=""></a>
-            <a href="" class="pr-3"><img src="./assests/facebook.svg" alt=""></a>
+            <a href="https://www.instagram.com/mstcvit/" class="pr-3 pl-4"><img src="./assests/insta.svg" alt=""></a>
+            <a href="https://www.linkedin.com/company/micvitvellore/" class="pr-3 "><img src="./assests/linkenIn.svg"
+                alt=""></a>
+            <a href="https://www.facebook.com/mstcvit" class="pr-3"><img src="./assests/facebook.svg" alt=""></a>
           </div>
 
         </div>
@@ -383,6 +387,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
     integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="./index.js"></script>
 </body>
 
