@@ -52,10 +52,10 @@ nav {
   display: none;
 }
 #landing {
-  background-image: url("./assests/heronew.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("./assests/hero_final.svg");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
   position: relative;
 }
 #video {
@@ -460,6 +460,10 @@ nav {
   }
   #footer_mobile {
     display: block !important;
+  }
+  #footer_mobile #logo{
+    width: 175px;
+    height: 40px;
   }
 }
 
