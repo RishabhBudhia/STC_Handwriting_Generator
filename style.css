@@ -28,7 +28,7 @@ html {
 nav {
   background-color: #f6ecdf;
 }
-.navbar {
+.navbar{
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -42,6 +42,9 @@ nav {
 }
 .navbar_nav {
   margin-left: auto;
+}
+#land_mob{
+  display: none;
 }
 /* ------------------------------------LANDING PAGE------------------------------------- */
 
@@ -387,7 +390,15 @@ nav {
    margin-top: 10rem;
  }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 498px){
+#land_mob{
+  display: block;
+}
+#land_web{
+  display: none;
+}
+}
+@media only screen and (max-width: 768px) {
   /* CSS */
   #landing {
     top: 0;
