@@ -358,7 +358,7 @@ nav {
 
 .font_img img{
   max-width: 100%;
-  max-height: max-content;
+  max-height:auto;
 }
 
 
@@ -370,6 +370,11 @@ nav {
 @media only screen and (max-width: 346px) {
   .drag_drop_outline {
     left: -19.25% !important;
+  }
+}
+@media (min-width:400px) and (max-width: 427px) {
+  .drag_drop_outline {
+    left: -6.25% !important;
   }
 }
 @media (min-width:783px) and (max-width: 983px) {
@@ -401,7 +406,7 @@ nav {
     position: absolute;
     z-index: 1;
     /* top: 50rem !important; */
-    top: 40rem !important;
+    top: 46rem !important;
     left: 14% !important;
     width: 73vw !important;
     height: 50vh !important;
