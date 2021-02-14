@@ -98,6 +98,8 @@ $(document).ready(() => {
 
 var file_name = document.getElementById("file_name");
 var myfile = document.getElementById("myfile");
+let file = ''
+
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
 
@@ -109,6 +111,8 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
     if (inputElement.files.length) {
       updateThumbnail(dropZoneElement, inputElement.files[0]);
 
+      // file to be loaded
+      file = inputElement.files[0]
       console.log(inputElement.files[0]);
       console.log(inputElement.files[0].size);
       console.log(inputElement.files[0].name);
@@ -157,6 +161,9 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 
     if (e.dataTransfer.files.length) {
       inputElement.files = e.dataTransfer.files;
+
+      // file to be loaded
+      file = e.dataTransfer.files[0]
       console.log(e.dataTransfer.files[0]);
       console.log(e.dataTransfer.files[0].size);
       console.log(e.dataTransfer.files[0].name);
@@ -168,7 +175,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
       if (regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 25000) {
+        if (inputElement.files[0].size > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
           alert("file size should be less than 25KB");
@@ -215,24 +222,17 @@ function updateThumbnail(dropZoneElement, file) {
 
 }
 
-// file to be loaded
-document.querySelector("#myfile").addEventListener("change", (event) => {
-  handleImageUpload(event);
-});
 
-let files = " ";
-const handleImageUpload = async (event) => {
-  files = await event.target.files;
-};
-
+//font selected by the user
 var font_select = document.getElementById("finalbtn");
+
 font_select.addEventListener("click", async () => {
   let selected = document.querySelector('input[type="radio"]:checked');
   // console.log(selected.value);
 
 
   const formData = new FormData();
-  formData.append("file", files[0]);
+  formData.append("file", file);
   formData.append("font", selected.value);
 
   let url = 'https://stc-handwriter.azurewebsites.net/';
@@ -243,14 +243,18 @@ font_select.addEventListener("click", async () => {
     body: formData
   })
     .then((response) => response.json())
-    .then(async (result) => {
+    .then((result) => {
 
-      window.location.href = (url + result.pdfFilename)
-      // location.reload()
+      if (result.pdfFilename) {
+        window.location.href = (url + result.pdfFilename)
+      }
+      else {
+        alert(result.err)
+      }
     })
     .catch(error => {
       console.error(error)
-      alert("There was some error. Please refresh and upload your file again!");
+      alert("There was some error connecting to server. Please try again !");
     })
 
 });
