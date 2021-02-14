@@ -453,3 +453,12 @@ nav {
     height: auto;
   }
 }
+
+@media (max-width: 426px) {
+  #about {
+    margin-top: -1rem !important;
+  }
+  video {
+    height: 53vh !important;
+  }
+}
