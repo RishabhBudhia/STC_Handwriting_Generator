@@ -1,5 +1,6 @@
 if (window.performance && window.performance.navigation.type === window.performance.navigation.TYPE_BACK_FORWARD) {
   alert('Please refresh the page and continue');
+  window.location.reload();
 }
 
 var textWrapper = document.querySelector('.ml2');
@@ -118,11 +119,11 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       file_name.innerHTML = inputElement.files[0].name;
 
 
-      var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
+      // var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
 
-      if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
+      if (regxthree.test(check) || regxfour.test(check)) {
         if (size_of_file > 100000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
@@ -135,7 +136,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .doc or docx or txt");
+        alert("File type should be .docx or .txt");
       }
     }
   });
@@ -163,10 +164,10 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var check = e.dataTransfer.files[0].name.trim().replace(/\s/g, "");
       file_name.innerHTML = e.dataTransfer.files[0].name;
       // var regx = /.+\.pdf$/;
-      var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
+      // var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
-      if (regxtwo.test(check) || regxthree.test(check) || regxfour.test(check)) {
+      if (regxthree.test(check) || regxfour.test(check)) {
         if (size_of_file > 100000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
@@ -179,7 +180,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .doc or docx or txt");
+        alert("File type should be .docx or .txt");
       }
 
       updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
