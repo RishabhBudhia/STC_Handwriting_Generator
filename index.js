@@ -124,10 +124,10 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
 
       if (regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 100000) {
+        if (size_of_file > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
-          alert("file size too large");
+          alert("file size should be less than 25KB");
         } else {
           document.getElementById("upload").style.display = "none";
           document.getElementById("success_container").style.display = "block";
@@ -168,10 +168,10 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
       if (regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 100000) {
+        if (size_of_file > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
-          alert("file size too large");
+          alert("file size should be less than 25KB");
         } else {
           document.getElementById("upload").style.display = "none";
           document.getElementById("success_container").style.display = "block";
