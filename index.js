@@ -168,7 +168,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
       var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
       if (regxthree.test(check) || regxfour.test(check)) {
-        if (size_of_file > 25000) {
+        if (inputElement.files[0].size > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
           alert("file size should be less than 25KB");
