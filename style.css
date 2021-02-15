@@ -159,7 +159,7 @@ nav {
 }
 
 #main {
-  height: 100vh;
+  min-height: 100vh;
 }
 .file_upload p,
 .select_font p {
@@ -334,6 +334,7 @@ nav {
   font-size: 16px;
   line-height: 26px;
   color: white;
+  height: auto;
 }
 
 #footer_mobile .footer a {
@@ -362,6 +363,11 @@ nav {
     left: -12.25% !important;
   }
 }
+@media only screen and (min-width: 1024px) {
+  #main {
+    /* margin-top: 11rem; */
+  }
+}
 @media only screen and (max-width: 346px) {
   .drag_drop_outline {
     left: -19.25% !important;
@@ -379,7 +385,7 @@ nav {
 }
 @media (min-width: 767px) and (max-width: 987px) {
   .footer {
-    margin-top: 10rem;
+    margin-top: 16rem !important;
   }
 }
 @media (min-width: 1004px) and (max-width: 1187px) {
