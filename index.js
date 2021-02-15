@@ -87,7 +87,6 @@ window.onload = function () {
 
 $(document).ready(() => {
   $("#convert_one").click(() => {
-    alert("In font three certain symbols are not supported");
     $("#font").show("slide", { direction: "left" }, 1000);
   });
   $("#finalbtn").click(() => {
