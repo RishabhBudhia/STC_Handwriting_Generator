@@ -266,7 +266,7 @@ nav {
 /* -----------------------FOOTER--------------------------------------------------------- */
 .footer {
   margin-top: 5rem;
-  min-height: 280px;
+  height: 24rem;
   width: 100%;
   font-family: "Montserrat", sans-serif;
   background-color: #151d28;
