@@ -248,6 +248,8 @@ font_select.addEventListener("click", async () => {
 
       if (result.pdfFilename) {
         window.location.href = (url + result.pdfFilename)
+        $("#download").hide();
+        $("#downloaded").show();
       }
       else {
         alert(result.err)
