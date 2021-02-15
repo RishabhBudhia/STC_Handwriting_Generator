@@ -9,7 +9,11 @@
   display: grid;
   place-items: center;
 } */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body,
 html {
   /* min-height: 100vh; */
@@ -191,6 +195,7 @@ nav {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   background-color: #00ffc2;
+  padding-left: 1rem;
 }
 .btn_disable {
   background-color: #00ffc2;
@@ -377,6 +382,22 @@ nav {
     margin-top: 10rem;
   }
 }
+@media (min-width: 1004px) and (max-width: 1187px) {
+  #font {
+    margin-top: 7rem !important;
+  }
+}
+@media (min-width: 767px) and (max-width: 990px) {
+  #font {
+    margin-top: 7rem !important;
+  }
+  #footer_web {
+    margin-top: -11rem !important;
+  }
+  #footer_mobile {
+    margin-top: -11rem !important;
+  }
+}
 @media only screen and (max-width: 498px) {
   #land_mob {
     display: block;
@@ -451,7 +472,7 @@ nav {
   }
   .font_img {
     width: fit-content;
-    height: auto;
+    height: auto !important;
   }
 
   .font_img img {

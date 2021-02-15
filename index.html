@@ -79,7 +79,7 @@
             </div>
           </div>
           <div id="video" class="container-fluid d-flex justify-content-center align-items-center">
-            <video autoplay muted style="width: 100vw;height: 65vh;">
+            <video autoplay loop muted style="width: 100vw;height: 65vh;">
               <source src="./assests/video/handwriting_generator1.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -261,7 +261,7 @@
   </main>
 
   <!-- -------------------------------FONT SELECTION-------------------------------------------------- -->
-  <section id="font" style="display: none;min-height: 100vh;">
+  <section id="font" style="display:none;min-height: 100vh;">
     <form action="">
       <div class=" container">
         <div class="row text-center">
@@ -277,22 +277,22 @@
           <form action="" id="font_form">
             <div class="font_outer d-flex justify-content-center align-items-center ">
               <div class="row" id="font_select">
-                <div class="col"> <input type="radio" name="font" id="font1" value="1" checked="checked"> <label
+                <div class="col no-wrap"> <input type="radio" name="font" id="font1" value="1" checked="checked"> <label
                     for="font1">
-                    <div class="font_select font_img">
+                    <div class="font_select font_img ">
                       <img src="./assests/fonts/font1Optimized.jpg" style=" border-radius: 8px;">
                       <p class="text-center pt-2">Font 1</p>
                     </div>
                   </label></div>
                 <div class="col"> <input type="radio" name="font" id="font2" value="2"> <label for="font2">
-                    <div class=" font_select font_img">
+                    <div class=" font_select font_img ">
                       <img src="./assests/fonts/font2Optimized.jpg" style=" border-radius: 8px;">
                       <p class="text-center pt-2">Font 2</p>
                     </div>
                   </label></div>
                 <div class="col"><input type="radio" name="font" id="font3" value="3"> <label for="font3">
-                    <div class="font_select font_img"> <img src="./assests/fonts/font3Optimized.jpg"
-                        style=" border-radius: 8px;">
+                    <div class="font_select font_img ">
+                      <img src="./assests/fonts/font3Optimized.jpg" style=" border-radius: 8px;">
                       <p class="text-center pt-2">Font 3</p>
                     </div>
                   </label></div>
@@ -300,8 +300,9 @@
 
             </div>
             <div class="row d-flex justify-content-center align-items-center mt-5">
-              <a href="#main" class=" d-flex justify-content-center align-items-center" style="text-decoration: none;">
-                <button type="button" class="btn btn_convert" id="finalbtn">Convert</button></a>
+              <a href="#main" class="ml-5" style="text-decoration: none;display: grid;place-items: center;">
+                <button type="button" class="btn btn_convert" id="finalbtn">Convert</button>
+              </a>
             </div>
           </form>
         </div>
