@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
 @import url("./fonts/Graphik-Regular.ttf");
 
-/* .heading__container > h2 {
-  display: grid;
-  place-items: center;
-} */
+:root {
+  --primary: #f88f07;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,17 +16,9 @@
 }
 body,
 html {
-  /* min-height: 100vh; */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-/* #navbarNav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: 55rem;
-  padding: 5px !important;
-} */
 
 /* ------------------------NAVBAR----------------------------------------------------- */
 nav {
@@ -38,7 +30,7 @@ nav {
   font-weight: 400;
 }
 .nav_btn {
-  background-color: #00ffc2;
+  background-color: var(--primary);
   border-radius: 4px;
   width: 9rem;
   color: #0c0803;
@@ -64,7 +56,6 @@ nav {
 }
 
 .heading__container {
-  /* min-height: 100vh; */
   width: 100vw;
 }
 .heading__container h2 {
@@ -93,14 +84,13 @@ nav {
   color: black;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  /* margin-bottom: 5rem; */
 }
 .heading__button .btn_demo {
-  border: 2px solid #00ffc2;
+  border: 2px solid var(--primary);
   border-radius: 4px;
 }
 .heading__button .btn_start {
-  background-color: #00ffc2;
+  background-color: var(--primary);
   border-radius: 4px;
 }
 
@@ -110,7 +100,6 @@ nav {
 }
 .feature__container {
   padding-top: 5rem;
-  /* margin-top: -5rem; */
   min-height: 500px;
   width: 100%;
   background-color: #f8edec;
@@ -121,7 +110,6 @@ nav {
   font-weight: 700;
   font-size: 48px;
   text-align: center;
-  /* font-feature-settings: "liga" off; */
   color: #151d28;
 }
 
@@ -179,7 +167,6 @@ nav {
   position: absolute;
   top: 40%;
   left: 0.75%;
-  /* border: 2px dashed #ef9f9a; */
   width: 386px;
   height: 236px;
   border-radius: 8px;
@@ -194,11 +181,11 @@ nav {
   color: black;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  background-color: #00ffc2;
+  background-color: var(--primary);
   padding-left: 1rem;
 }
 .btn_disable {
-  background-color: #00ffc2;
+  background-color: var(--primary);
   opacity: 0.25 !important;
 }
 /*drop*/
@@ -243,7 +230,6 @@ nav {
 .font_select {
   height: 260px;
   width: 20vw;
-  /* border: 1px solid black; */
   border-radius: 8px;
   cursor: pointer;
 }
@@ -255,7 +241,7 @@ nav {
   border-radius: 8px;
 }
 .font_outer input:checked + label {
-  border: 3px solid #01bd90;
+  border: 3px solid var(--primary);
   border-radius: 8px;
   box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
 }
@@ -279,7 +265,6 @@ nav {
   opacity: 0.2 !important;
 }
 .footer .footer_nav a {
-  /* margin-right: -6rem; */
   color: #ffff;
   text-decoration: none;
 }
@@ -294,7 +279,7 @@ nav {
   word-wrap: break-word;
 }
 .success_container {
-  border: 2px solid #00ffc2;
+  border: 2px solid var(--primary);
 }
 
 .success_container p {
@@ -343,10 +328,6 @@ nav {
 }
 
 .font_img {
-  /* background-image: url('./assests/fonts/fontdemo.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:center; */
   width: fit-content;
   height: fit-content;
   border-radius: 8px;
@@ -363,11 +344,7 @@ nav {
     left: -12.25% !important;
   }
 }
-@media only screen and (min-width: 1024px) {
-  #main {
-    /* margin-top: 11rem; */
-  }
-}
+
 @media only screen and (max-width: 346px) {
   .drag_drop_outline {
     left: -19.25% !important;
