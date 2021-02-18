@@ -131,7 +131,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
         if (size_of_file > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
-          alert("file size should be less than 25KB");
+          alert("file size should be less than 25KB.  Please refresh and upload again");
         } else {
           document.getElementById("upload").style.display = "none";
           document.getElementById("success_container").style.display = "block";
@@ -140,7 +140,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .docx or .txt");
+        alert("File type should be .docx or .txt.  Please refresh and upload again");
       }
     }
   });
@@ -178,7 +178,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
         if (inputElement.files[0].size > 25000) {
           document.getElementById("upload").style.display = "none";
           document.getElementById("error_container").style.display = "block";
-          alert("file size should be less than 25KB");
+          alert("file size should be less than 25KB. Please refresh and upload again");
         } else {
           document.getElementById("upload").style.display = "none";
           document.getElementById("success_container").style.display = "block";
@@ -187,7 +187,7 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       else {
         document.getElementById("upload").style.display = "none";
         document.getElementById("error_container").style.display = "block";
-        alert("File type should be .docx or .txt");
+        alert("File type should be .docx or .txt. Please refresh and upload again");
       }
 
       updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
