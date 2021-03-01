@@ -119,13 +119,13 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
 
       let size_of_file = inputElement.files[0].size;
 
-      var check = inputElement.files[0].name.trim().replace(/\s/g, "");
-      file_name.innerHTML = inputElement.files[0].name;
+      var check = inputElement.files[0].name;
+      file_name.innerHTML = inputElement.files[0].name.trim().replace(/\s/g, "");
 
 
       // var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
-      var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
-      var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
+      var regxthree = /^([A-Za-z0-9_./\-()]{2,500}).docx$/;
+      var regxfour = /^([A-Za-z0-9_./\-()]{2,500}).txt$/;
 
       if (regxthree.test(check) || regxfour.test(check)) {
         if (size_of_file > 25000) {
@@ -172,8 +172,8 @@ document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
       file_name.innerHTML = e.dataTransfer.files[0].name;
       // var regx = /.+\.pdf$/;
       // var regxtwo = /^([A-Za-z0-9_./()]{2,500}).doc$/;
-      var regxthree = /^([A-Za-z0-9_./()]{2,500}).docx$/;
-      var regxfour = /^([A-Za-z0-9_./()]{2,500}).txt$/;
+      var regxthree = /^([A-Za-z0-9_./\-()]{2,500}).docx$/;
+      var regxfour = /^([A-Za-z0-9_./\-()]{2,500}).txt$/;
       if (regxthree.test(check) || regxfour.test(check)) {
         if (inputElement.files[0].size > 25000) {
           document.getElementById("upload").style.display = "none";
